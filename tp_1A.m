@@ -1,4 +1,4 @@
-function [A, rho] = generar_sistema(n)
+function [Matriz_A, rho] = generar_sistema(n)
     h = 1 / (n - 1);           % Paso
     A = zeros(n, n);           % Inicializar matriz A
     rho = zeros(n, 1);         % Inicializar vector rho
