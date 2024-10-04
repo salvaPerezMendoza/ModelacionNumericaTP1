@@ -25,3 +25,6 @@ function [A, rho] = generar_sistema(n)
     rho(n) = 0;
 end
 
+
+
+
