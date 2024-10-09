@@ -1,11 +1,11 @@
-function comparar_performance()
-    tol = 0.00001;
+function comparar_performance_por_tolerancia()
     max_iter = 10000;
-    tamanos = [11, 51, 101];  % Tamaños del sistema
+    tolerancias = [0.00001, 0.0001, 0.001];  % Diferentes tolerancias
+    n = 101;
 
-    for i = 1:3
-        n = tamanos(i);  % Usar paréntesis para acceder a los elementos del array
-        fprintf('--- Sistema de tamaño n = %d ---\n', n);
+    for i = 1:length(tolerancias)
+        tol = tolerancias(i);  % Usar paréntesis para acceder a los elementos del array
+        fprintf('--- Sistema con tolerancia = %e ---\n', tol);  % Mostrar tolerancia en formato científico
 
         % Generar el sistema
         [A, rho] = generar_sistema(n);
